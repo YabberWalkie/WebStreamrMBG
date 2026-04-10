@@ -1,18 +1,10 @@
----
-title: Webstreamr
-emoji: 🎬
-colorFrom: blue
-colorTo: red
-sdk: docker
-app_port: 7860
-pinned: false
----
-
 # WebStreamrMBG
 
 [![Tests](https://github.com/newman2x/WebStreamrMBG/actions/workflows/tests.yml/badge.svg)](https://github.com/newman2x/WebStreamrMBG/actions/workflows/tests.yml)
 [![GitHub release](https://img.shields.io/github/v/release/newman2x/WebStreamrMBG)](https://github.com/newman2x/WebStreamrMBG/releases)
 ![GitHub License](https://img.shields.io/github/license/newman2x/WebStreamrMBG)
+
+> **WebStreamrMBG** is a fork of [WebStreamr](https://github.com/webstreamr/webstreamr) with custom patches and hosted on Hugging Face Spaces.
 
 [Stremio](https://www.stremio.com/) add-on which provides HTTP URLs from streaming websites.
 
@@ -20,8 +12,11 @@ HTTP streams have limitations.
 For a better experience, I'd advise using a Debrid service and WebStreamrMBG as fallback.
 [TorBox](https://torbox.app/subscription?referral=f22eb00d-27ce-4e20-85fc-68da3d018b99) is working very well.
 
-## Public instance
+## Public Instances
 
+| Instance | URL |
+|----------|-----|
+| WebStreamrMBG | https://newman21-webstreamrmbg.hf.space |
 
 ## Known issues / limitations
 
@@ -33,7 +28,7 @@ For a better experience, I'd advise using a Debrid service and WebStreamrMBG as 
 
 ## MediaFlow Proxy
 
-[MediaFlow Proxy](https://github.com/mhdzumair/mediaflow-proxy/) can be added when configuration the add-on to gain access to a couple of more file hosters.
+[MediaFlow Proxy](https://github.com/mhdzumair/mediaflow-proxy/) can be added when configuring the add-on to gain access to a couple of more file hosters.
 It depends highly on the language / source used if that unlocks more streams or not.
 
 MediaFlow proxy is needed because some hosters ip-lock streams and the add-on does not run on the same device that will stream the video.
@@ -48,22 +43,12 @@ The following hosters can be used only with MediaFlow Proxy:
 - Streamtape
 - VOE
 
-MediaFlow proxy can either be self-hosted or acquired via bundle from [ElfHosted](https://docs.elfhosted.com/app/mediaflow-proxy/).
-
-## Hosting
-
-Don't want to use the public instance, or concerned about reliability during periods of high use? It's open-source, you can host it yourself!
-
-### ElfHosted (easy mode)
-
-
-
-### Self-Hosting
+## Self-Hosting
 
 You can run the latest WebStreamrMBG via Docker. E.g.
 
 ```shell
- docker run \
+docker run \
     --detach=true \
     --name webstreamr-mbg \
     --rm \
@@ -74,7 +59,7 @@ You can run the latest WebStreamrMBG via Docker. E.g.
     newman2x/webstreamr-mbg
 ```
 
-### Environment variables
+## Environment variables
 
 #### `CACHE_DIR`
 
@@ -95,7 +80,6 @@ Optional. Comma separated list of sources which should be disabled. E.g. `frembe
 #### `FLARESOLVERR_ENDPOINT`
 
 Optional. If domains show Cloudflare challenges, FlareSolverr can be used to work around them. E.g. `http://flaresolverr:8191`
-Proxy configuration is passed-through and only a single session is used to save resources. Byparr is not supported.
 
 #### `MANIFEST_ID`
 
@@ -111,12 +95,7 @@ Optional. Port of the node web server. Default: `51546`
 
 #### `PROXY_CONFIG`
 
-Optional. Proxies which should be used based on domain. Supports minimatch. E.g. `dood.to:http://USERNAME:PASSWORD@IP:PORT,*:socks5://172.17.0.1:1080` would use an http proxy for dood.to and a socks5 proxy for all other domains.
-
-Some hosters are a bit picky when it comes to IPs. Best case is if you use a residential IP.
-If you can't do that, then I suggest to use a VPN / proxy like Cloudflare WARP.
-DoodStream is not working with WARP.
-Free Webshare proxies seem to work with it.
+Optional. Proxies which should be used based on domain. Supports minimatch. E.g. `dood.to:http://USERNAME:PASSWORD@IP:PORT,*:socks5://172.17.0.1:1080`
 
 #### `TMDB_ACCESS_TOKEN`
 
