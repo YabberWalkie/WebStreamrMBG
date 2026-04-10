@@ -22,7 +22,7 @@ export class VixSrc extends Extractor {
     playlistUrl.searchParams.append('h', '1');
 
     const finalUrl = supportsMediaFlowProxy(ctx)
-      ? buildMediaFlowProxyHlsUrl(ctx, playlistUrl, headers)
+      ? buildMediaFlowProxyHlsUrl(ctx, playlistUrl, headers, true)
       : playlistUrl;
 
     const countryCodes = meta.countryCodes ?? [CountryCode.multi, ...(await this.determineCountryCodesFromPlaylist(ctx, playlistUrl, { headers }))];
