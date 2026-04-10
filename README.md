@@ -1,3 +1,13 @@
+---
+title: Webstreamr
+emoji: 🎬
+colorFrom: blue
+colorTo: red
+sdk: docker
+app_port: 7860
+pinned: false
+---
+
 # WebStreamr
 
 [![Tests](https://github.com/webstreamr/webstreamr/actions/workflows/tests.yml/badge.svg)](https://github.com/webstreamr/webstreamr/actions/workflows/tests.yml)
