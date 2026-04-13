@@ -1,21 +1,10 @@
----
-title: WebstreamrMBG
-emoji: 🎬
-colorFrom: blue
-colorTo: red
-sdk: docker
-app_port: 7860
-pinned: false
----
-
-
 # WebStreamrMBG
 
 [![Tests](https://github.com/newman2x/WebStreamrMBG/actions/workflows/tests.yml/badge.svg)](https://github.com/newman2x/WebStreamrMBG/actions/workflows/tests.yml)
 [![GitHub release](https://img.shields.io/github/v/release/newman2x/WebStreamrMBG)](https://github.com/newman2x/WebStreamrMBG/releases)
 ![GitHub License](https://img.shields.io/github/license/newman2x/WebStreamrMBG)
 
-> **WebStreamrMBG** is a fork of [WebStreamr](https://github.com/webstreamr/webstreamr) with custom patches and hosted on Hugging Face Spaces.
+> **WebStreamrMBG** is a fork of [WebStreamr](https://github.com/webstreamr/webstreamr) with custom patches and CI/CD pipeline.
 
 [Stremio](https://www.stremio.com/) add-on which provides HTTP URLs from streaming websites.
 
@@ -23,11 +12,11 @@ HTTP streams have limitations.
 For a better experience, I'd advise using a Debrid service and WebStreamrMBG as fallback.
 [TorBox](https://torbox.app/subscription?referral=f22eb00d-27ce-4e20-85fc-68da3d018b99) is working very well.
 
-## Public Instances
+## Public Instance
 
 | Instance | URL |
 |----------|-----|
-| WebStreamrMBG | https://87d6a6ef6b58-webstreamrmbg.baby-beamup.club |
+| Stable | https://87d6a6ef6b58-webstreamrmbg.baby-beamup.club |
 
 ## Known issues / limitations
 
