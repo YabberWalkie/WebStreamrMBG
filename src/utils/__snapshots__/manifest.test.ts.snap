@@ -46,7 +46,7 @@ exports[`buildManifest default manifest 1`] = `
     },
     {
       "key": "it",
-      "title": "Italian 🇮🇹 (Eurostreaming, MostraGuarda, VixSrc)",
+      "title": "Italian 🇮🇹 (Eurostreaming, MostraGuarda)",
       "type": "checkbox",
     },
     {
@@ -607,11 +607,6 @@ exports[`buildManifest has unchecked source without a config 1`] = `
   {
     "key": "multi",
     "title": "Multi 🌐 (VixSrc)",
-    "type": "checkbox",
-  },
-  {
-    "key": "it",
-    "title": "Italian 🇮🇹 (VixSrc)",
     "type": "checkbox",
   },
   {

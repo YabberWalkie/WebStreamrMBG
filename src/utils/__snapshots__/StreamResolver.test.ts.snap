@@ -590,10 +590,10 @@ exports[`resolve uses priority for sorting 1`] = `
 [
   {
     "behaviorHints": {
-      "bingeGroup": "webstreamr-mbg-vixsrc-vixsrc-multi_it",
+      "bingeGroup": "webstreamr-mbg-vixsrc-vixsrc-multi_en_it",
       "notWebReady": true,
     },
-    "name": "WebStreamrMBG 🌐 🇮🇹 1080p",
+    "name": "WebStreamrMBG 🌐 🇺🇸 🇮🇹 1080p",
     "title": "South Park S26E02
 🔗 VixSrc",
     "url": "https://vixsrc.to/playlist/418073.m3u8?token=19d4fca75ba7f69b2e96fa429d264517&expires=1781602231&h=1",
