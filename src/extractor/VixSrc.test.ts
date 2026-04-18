@@ -13,6 +13,10 @@ describe('VixSrc', () => {
   test('Full Metal Jacket', async () => {
     expect(await extractorRegistry.handle(ctx, new URL('https://vixsrc.to/movie/600'))).toMatchSnapshot();
   });
+  test('Full Metal Jacket via MediaFlow Proxy', async () => {
+    const ctxMfp = createTestContext({ multi: '', mediaFlowProxyUrl: 'mediaflow.test.org', mediaFlowProxyPassword: 'test' });
+    expect(await extractorRegistry.handle(ctxMfp, new URL('https://vixsrc.to/movie/600'))).toMatchSnapshot();
+  });
 
   test('Black Mirror', async () => {
     expect(await extractorRegistry.handle(ctx, new URL('https://vixsrc.to/tv/42009/4/2'))).toMatchSnapshot();

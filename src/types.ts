@@ -101,6 +101,7 @@ export interface InternalUrlResult {
   error?: unknown;
   label?: string;
   meta?: Meta;
+  notWebReady?: boolean;
   requestHeaders?: Record<string, string>;
 }
 
