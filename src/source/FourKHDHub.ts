@@ -77,11 +77,11 @@ export class FourKHDHub extends Source {
 
     const typeSlug = tmdbId.season ? '-series-' : '-movie-';
 
-return $(`.movie-card`)
-  .filter((_i, el) => {
-    const href = String($(el).attr('href'));
-    return href.includes(typeSlug);
-  })
+    return $(`.movie-card`)
+      .filter((_i, el) => {
+        const href = String($(el).attr('href'));
+        return href.includes(typeSlug);
+      })
       .filter((_i, el) => {
         const movieCardYear = parseInt($('.movie-card-meta', el).text());
 

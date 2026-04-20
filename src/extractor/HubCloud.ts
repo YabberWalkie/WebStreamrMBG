@@ -105,7 +105,7 @@ export class HubCloud extends Extractor {
             },
             requestHeaders: { Referer: userUrl.href },
           };
-        })
+        }),
       ).then(results => results.filter(r => r !== null)),
     ]);
   };
