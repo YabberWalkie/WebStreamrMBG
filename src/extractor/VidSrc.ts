@@ -51,7 +51,7 @@ export class VidSrc extends Extractor {
       throw error;
     }
 
-    const $ = cheerio.load(html.replace('<!--', '').replace('-->', '')); // server HTML is commented-out
+    const $ = cheerio.load(html.replace(/<!--/g, '').replace(/-->/g, '')); // server HTML is commented-out
 
     const iframeUrl = new URL(($('#player_iframe').attr('src') as string).replace(/^\/\//, 'https://'));
     const title = $('title').text().trim();

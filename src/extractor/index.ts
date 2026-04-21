@@ -56,8 +56,6 @@ export const createExtractors = (fetcher: Fetcher): Extractor[] => {
       'vidsrcme.su',
       'vidsrc-me.ru',
       'vidsrc-me.su',
-      'vidsrc-embed.ru',
-      'vidsrc-embed.su',
       'vsrc.su',
     ]),
     new VixSrc(fetcher),

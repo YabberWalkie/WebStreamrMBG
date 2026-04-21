@@ -14,7 +14,7 @@ export class VidSrc extends Source {
 
   public readonly countryCodes: CountryCode[] = [CountryCode.multi];
 
-  public readonly baseUrl = 'https://vidsrc-embed.ru';
+  public readonly baseUrl = 'https://vidsrcme.ru';
 
   public async handleInternal(_ctx: Context, _type: string, id: Id): Promise<SourceResult[]> {
     const url = id.season
