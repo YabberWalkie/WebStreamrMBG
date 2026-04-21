@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.70.5](https://github.com/newman2x/WebStreamrMBG/compare/v0.70.4...v0.70.5) (2026-04-21)
+
+
+### Bug Fixes
+
+* **extractor:** fix VidSrc comment stripping and update domains ([c15ba0d](https://github.com/newman2x/WebStreamrMBG/commit/c15ba0dc5e570df7dc9cf0bc118e91d8fe0c2b53))
+
+
+### Tests
+
+* **snapshots:** update VidSrc domain snapshots ([5055299](https://github.com/newman2x/WebStreamrMBG/commit/5055299488f9319865e2e6d41959bc95a11fcdc0))
+
 ## [0.70.4](https://github.com/newman2x/WebStreamrMBG/compare/v0.70.3...v0.70.4) (2026-04-20)
 
 
