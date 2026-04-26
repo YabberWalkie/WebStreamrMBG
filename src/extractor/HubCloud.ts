@@ -9,9 +9,9 @@ export class HubCloud extends Extractor {
 
   public readonly label = 'HubCloud';
 
-  public override readonly ttl: number = 43200000; // 12h
+  public override readonly ttl: number = 3600000;
 
-  public override readonly cacheVersion = 3;
+  public override readonly cacheVersion = 4;
 
   public supports(_ctx: Context, url: URL): boolean {
     return null !== url.host.match(/hubcloud/);
