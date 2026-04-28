@@ -17,7 +17,7 @@ export class Movix extends Source {
 
   public readonly countryCodes: CountryCode[] = [CountryCode.fr];
 
-  public readonly baseUrl = 'https://api.movix.site';
+  public readonly baseUrl = 'https://api.movix.cash';
 
   private readonly fetcher: Fetcher;
 
@@ -35,7 +35,12 @@ export class Movix extends Source {
       ? new URL(`/api/tmdb/tv/${tmdbId.id}?season=${tmdbId.season}&episode=${tmdbId.episode}`, this.baseUrl)
       : new URL(`/api/tmdb/movie/${tmdbId.id}`, this.baseUrl);
 
-    const json = await this.fetcher.json(ctx, apiUrl);
+    const json = await this.fetcher.json(ctx, apiUrl, {
+      headers: {
+        Origin: 'https://movix.cash',
+        Referer: 'https://movix.cash/',
+      },
+    });
     const data: MovixApiData | undefined = tmdbId.season ? json['current_episode'] : json;
 
     if (!data || !data.player_links) {
