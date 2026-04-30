@@ -274,12 +274,12 @@ export class Fetcher {
           url: url.href,
           session,
           session_ttl_minutes: 60,
-          maxTimeout: 15000,
+          maxTimeout: 60000,
           disableMedia: true,
           ...(proxyUrl && { proxy: { url: proxyUrl.href } }),
         };
 
-        const requestConfig: CustomRequestConfig = { method: 'POST', data, headers: { 'Content-Type': 'application/json' }, timeout: 15000, queueTimeout: 60000 };
+        const requestConfig: CustomRequestConfig = { method: 'POST', data, headers: { 'Content-Type': 'application/json' }, timeout: 60000, queueTimeout: 60000 };
         return JSON.parse((await this.queuedFetch(ctx, new URL('/v1', flareSolverrEndpoint), requestConfig)).data) as FlareSolverrResult;
       });
 
